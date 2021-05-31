@@ -24,7 +24,7 @@ RUN docker-php-ext-install \
 
 RUN usermod -u 1000 www-data
 
-WORKDIR /var/www/opencart
+WORKDIR /var/www
 
 CMD ["php-fpm"]
 
