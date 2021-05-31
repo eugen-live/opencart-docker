@@ -9,6 +9,8 @@ services:
     expose:
       - "9000"
     environment:
+      HTTP_SERVER: ${HTTP_SERVER}
+      HTTPS_SERVER: ${HTTPS_SERVER}
       MYSQL_HOST: mysql
       MYSQL_USERNAME: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
