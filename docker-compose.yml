@@ -31,7 +31,8 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - ./database/mysql:/var/lib/mysql
+      - ../data/init-backup.sql.dummy:/docker-entrypoint-initdb.d/init-backup.sql
+      - ../data/database/mysql:/var/lib/mysql
     environment:
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_USER: ${MYSQL_USER}
